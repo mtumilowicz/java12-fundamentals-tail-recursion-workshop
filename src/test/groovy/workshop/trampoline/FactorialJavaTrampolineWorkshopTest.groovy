@@ -1,11 +1,11 @@
-package answers
+package workshop.trampoline
 
-import spock.lang.Specification
 import answers.trampoline.FactorialJavaTrampoline
+import spock.lang.Specification
 
-class FactorialJavaTrampolineTest extends Specification {
+class FactorialJavaTrampolineWorkshopTest extends Specification {
 
-    def factorial = new FactorialJavaTrampoline()
+    def factorial = new FactorialJavaTrampolineWorkshop()
 
     def "5! -> 120"() {
         expect:
