@@ -4,9 +4,15 @@
     * http://groovy-lang.org/closures.html#_trampoline  
     * http://docs.groovy-lang.org/latest/html/gapi/groovy/transform/TailRecursive.html  
     * https://stackoverflow.com/questions/33923/what-is-tail-recursion
-    * https://github.com/mtumilowicz/java-stack
 
 ## preface
+* goals of this workshop
+    * introduction to JVM internals: stack, frame, operand stack
+        * https://github.com/mtumilowicz/java-stack
+    * understand the concept of recursion
+    * understand the difference between recursion and tail recursion
+    * how recursion is handled by JVM (know the limits)
+    * standard approaches to support JVM in handling recursion wise (trampoline, streams)
 
 ## tail recursion
 * tail call (tail recursion) is a kind of goto dressed as a call
@@ -68,13 +74,13 @@
 ## trampoline
 * mechanism that converts recurrent calls to the stream of consecutive function invocations until some function 
 could return value
-```
-Stream.iterate(this, nextInvocation)
-                .filter(checkIfComplete)
-                .findFirst()
-                .orElseThrow()
-                .result();
-```
+    ```
+    Stream.iterate(this, nextInvocation)
+                    .filter(checkIfComplete)
+                    .findFirst()
+                    .orElseThrow()
+                    .result();
+    ```
 * groovy
     * using `Closure` and its trampoline capability
         ```
@@ -90,3 +96,5 @@ Stream.iterate(this, nextInvocation)
     trampolined `Closure` is returned
     * that value will become the final result of the trampoline
     * so calls are made serially, rather than filling the stack
+* java
+    * we have to implement that functionality - simple functional interface
