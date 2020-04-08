@@ -1,7 +1,5 @@
 package workshop
 
-import groovy.transform.TailRecursive
-
 class FibonacciTailRecursionWorkshop {
 
     // inform JVM that function below is tail recursion, hint: @TailRecursive
