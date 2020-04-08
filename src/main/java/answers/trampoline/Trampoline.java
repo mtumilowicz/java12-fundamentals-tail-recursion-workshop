@@ -2,6 +2,8 @@ package answers.trampoline;
 
 import java.util.stream.Stream;
 
+import static java.util.function.Predicate.not;
+
 @FunctionalInterface
 public interface Trampoline<T> {
 
@@ -17,7 +19,7 @@ public interface Trampoline<T> {
 
     default T invoke() {
         return Stream.iterate(this, Trampoline::bounce)
-                .filter(Trampoline::isComplete)
+                .dropWhile(not(Trampoline::isComplete))
                 .findFirst()
                 .orElseThrow()
                 .result();
