@@ -2,7 +2,7 @@ package answers.trampoline;
 
 import java.util.function.IntToLongFunction;
 
-public class Factorial implements IntToLongFunction {
+public class FactorialJavaTrampoline implements IntToLongFunction {
 
     @Override
     public long applyAsLong(int value) {

@@ -1,6 +1,6 @@
 package answers
 
-class FactorialTrampoline {
+class FactorialGroovyTrampoline {
 
     static def factorial = { n, result = 1G ->
         n < 2 ? result : factorial.trampoline(n - 1, n * result)
