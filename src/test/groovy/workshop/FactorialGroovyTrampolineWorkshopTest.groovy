@@ -3,7 +3,7 @@ package workshop
 import answers.FactorialGroovyTrampoline
 import spock.lang.Specification
 
-class FactorialGroovyTrampolineTest extends Specification {
+class FactorialGroovyTrampolineWorkshopTest extends Specification {
 
     def "5! -> 120"() {
         expect:

@@ -3,7 +3,7 @@ package workshop
 import answers.FibonacciTailRecursion
 import spock.lang.Specification
 
-class FibonacciTailRecursionTest extends Specification {
+class FibonacciTailRecursionWorkshopTest extends Specification {
 
     def "fibo 10 = 55"() {
         expect:

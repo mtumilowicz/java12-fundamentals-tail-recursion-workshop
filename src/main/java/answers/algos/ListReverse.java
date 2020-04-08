@@ -53,7 +53,7 @@ public class ListReverse {
         node.next = null;
     }
 
-    private static boolean isLast(ListNode head) {
-        return head.next == null;
+    private static boolean isLast(ListNode node) {
+        return node.next == null;
     }
 }
