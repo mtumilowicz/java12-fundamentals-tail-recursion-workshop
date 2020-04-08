@@ -1,5 +1,6 @@
-package algos
+package answers.algos
 
+import answers.algos.Factorial
 import spock.lang.Specification
 
 class FactorialTest extends Specification {

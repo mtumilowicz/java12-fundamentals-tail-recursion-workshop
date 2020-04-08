@@ -1,4 +1,4 @@
-package algos;
+package answers.algos;
 
 import java.util.stream.IntStream;
 

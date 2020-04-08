@@ -1,4 +1,4 @@
-package trampoline
+package answers
 
 class FactorialTrampoline {
 

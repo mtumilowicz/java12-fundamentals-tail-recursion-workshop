@@ -1,4 +1,4 @@
-package algos;
+package answers.algos;
 
 public class StringReverse {
     static String withRecur(String str) {

@@ -1,5 +1,6 @@
-package algos
+package answers.algos
 
+import answers.algos.StringReverse
 import spock.lang.Specification
 
 class StringReverseTest extends Specification {

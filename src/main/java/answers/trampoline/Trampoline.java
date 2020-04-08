@@ -1,4 +1,4 @@
-package trampoline;
+package answers.trampoline;
 
 import java.util.stream.Stream;
 

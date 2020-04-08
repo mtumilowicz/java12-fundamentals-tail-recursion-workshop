@@ -1,6 +1,7 @@
-package trampoline
+package answers
 
 import spock.lang.Specification
+import answers.trampoline.Factorial
 
 class FactorialJavaTrampolineTest extends Specification {
 

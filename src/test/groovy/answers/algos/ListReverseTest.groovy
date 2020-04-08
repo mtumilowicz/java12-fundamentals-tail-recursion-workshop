@@ -1,5 +1,6 @@
-package algos
+package answers.algos
 
+import answers.algos.ListReverse
 import utils.ListNode
 import spock.lang.Specification
 

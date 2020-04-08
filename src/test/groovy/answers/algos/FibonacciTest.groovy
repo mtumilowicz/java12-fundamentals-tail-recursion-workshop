@@ -1,5 +1,6 @@
-package algos
+package answers.algos
 
+import answers.algos.Fibonacci
 import spock.lang.Specification
 
 class FibonacciTest extends Specification {
