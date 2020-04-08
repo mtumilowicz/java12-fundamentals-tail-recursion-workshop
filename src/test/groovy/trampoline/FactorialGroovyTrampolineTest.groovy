@@ -2,7 +2,8 @@ package trampoline
 
 import spock.lang.Specification
 
-class FactorialTrampolineTest extends Specification {
+class FactorialGroovyTrampolineTest extends Specification {
+
     def "5! -> 120"() {
         expect:
         FactorialTrampoline.getFactorial(5) == 120

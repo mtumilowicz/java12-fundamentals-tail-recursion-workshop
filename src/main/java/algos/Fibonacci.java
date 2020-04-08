@@ -1,5 +1,7 @@
 package algos;
 
+import utils.FibonacciTerm;
+
 import java.util.LinkedList;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -43,33 +45,10 @@ public class Fibonacci {
     static Long withStream(int n) {
         return n == 0
                 ? 0L
-                : Stream.iterate(new Fibo(), Fibo::next)
+                : Stream.iterate(new FibonacciTerm(), FibonacciTerm::next)
                 .limit(n)
-                .map(Fibo::get)
+                .map(FibonacciTerm::get)
                 .collect(Collectors.toCollection(LinkedList::new))
                 .getLast();
-    }
-
-    static class Fibo {
-        private final int first;
-        private final int second;
-
-        public Fibo() {
-            first = 0;
-            second = 1;
-        }
-
-        private Fibo(int first, int second) {
-            this.first = first;
-            this.second = second;
-        }
-
-        Fibo next() {
-            return new Fibo(second, first + second);
-        }
-
-        long get() {
-            return second;
-        }
     }
 }
