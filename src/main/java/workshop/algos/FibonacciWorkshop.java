@@ -23,7 +23,7 @@ public class FibonacciWorkshop {
     }
 
     static Long withStream(int n) {
-        // hint: Stream.iterate, FibonacciTerm, limit
+        // hint: Stream.iterate, FibonacciTerm, limit, skip, reduce
         return 0L;
     }
 }

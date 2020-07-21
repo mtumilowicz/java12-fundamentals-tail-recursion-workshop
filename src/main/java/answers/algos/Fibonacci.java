@@ -47,8 +47,8 @@ public class Fibonacci {
                 ? 0L
                 : Stream.iterate(new FibonacciTerm(), FibonacciTerm::next)
                 .limit(n)
+                .skip(n-1)
                 .map(FibonacciTerm::get)
-                .collect(Collectors.toCollection(LinkedList::new))
-                .getLast();
+                .reduce(0L, (a, b) -> b);
     }
 }
